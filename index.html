@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<head>
+<title>Name Picker</title>
+<link rel="stylesheet" type="text/css" href="name.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="name.js"></script>
+
+<style>
+	.box {
+  width: 200px;
+  height: 200px;
+  line-height: 190px;
+  background-color: pink;
+  border-radius: 100px;
+
+}
+
+.button
+ { 
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 35px;
+  padding: 1em ;
+  background-color: azure ;
+  height:4em;
+  float: center;
+  margin-left:40%;
+
+}
+
+
+.button2
+ { 
+  cursor: pointer;
+  border: 1px solid #7fb1b3;
+  border-radius: 0px;
+   color:white;
+  background-color: #7fb1b3 ;
+  height:3em;
+ 
+
+  margin-left:12%;
+}
+
+#t3{width:180px;height:10px; border-radius: 250px; margin-left:10px; background-color:white;}
+
+.left{text-align: left;padding-right:120%; padding-left:5%;}
+
+.right{text-align: right; padding-left:25%}
+
+.b1 {margin-left:40%;}
+h2{margin-left:5%; color:#cc6699;}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<header>
+  <h1>Name Picker</h1>
+</header>
+
+ 
+<div class="maincontent">
+
+	<div class="b1">
+
+<button class="button2"> <img src="1.png" width="30" height="30" /> </button>
+
+<div class="box">
+	<table>
+<tr>
+	
+	<td class="left">Rahim</td>
+	<td><button class="button">Spin </button></td>
+	<td class="right">Karim</td>
+
+
+</tr>
+	</table> 
+	
+	
+
+
+</div>
+
+<h2 id="win"></h2>
+
+</div>
+<br><br><br><br><br><br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+<p><b>&copy 2018 Jannatul Ferdaus. All Rights Reserved.</b></p>
+</footer>
+
+
+<script>
+  
+
+
+  
+  
+$('.button').click(function() {
+   
+
+  
+ x = 3600;
+
+
+  
+
+  $('.box').animate(
+    
+    { deg: 1890 },
+
+
+    {
+      duration: x,
+      
+      step: function(now) {
+
+        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+
+
+      }
+
+
+
+    });
+
+setTimeout("win()", 5000);
+
+
+});
+
+
+function win(){
+
+document.getElementById("win").innerHTML = "Rahim is Winner" ;
+
+
+setTimeout("location.reload()",8000);
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+</html>               
